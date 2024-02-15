@@ -1,0 +1,22 @@
+<div class="container">
+    <img [src]="cpu.imageUrl" [alt]="cpu.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{cpu.name}}
+            </span>
+            <span class="favourite {{cpu.favourite?'':'not'}}">
+                srce
+            </span>
+        </div>
+        <div class="speed">
+            <span>
+                CPU speed: <strong>{{cpu.cpuspeed}} </strong>
+            </span>
+        </div>
+        <div class="price">
+            <span>{{cpu.price|currency}}</span>
+        </div>
+        <button (click)="addToCart()">Add to Cart</button>
+    </div>
+</div>

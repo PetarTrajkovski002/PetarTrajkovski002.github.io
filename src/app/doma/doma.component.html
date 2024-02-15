@@ -1,0 +1,29 @@
+<app-search></app-search>
+<ul>
+    <li *ngFor="let cpu of cpus">
+        <a routerLink="/cpu/{{cpu.id}}"><img src="{{cpu.imageUrl}}" alt=""  height="200px" width="200px">
+            <div class="content">
+                <div class="name">
+                CPU: {{cpu.name}}
+                 </div>
+            
+            <span class="favourite {{cpu.favourite?'':'not'}}">
+                srce
+            </span>
+           
+           <div class="speed">
+                <span>🕒</span>
+               Clockspeed: {{cpu.cpuspeed}}
+           </div>
+           <div class="price">
+            <span>
+               Price: {{cpu.price|currency}}
+            </span>
+           </div>
+        </div>
+        <button>Add to Cart</button>
+          
+        </a>
+        
+    </li>
+</ul>
